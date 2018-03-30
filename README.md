@@ -27,3 +27,7 @@
     <li>Add groups of climbers.</li>
     <li>Add leaderboard for climbers in group.</li>
    </ul>
+<h2>Useful Links:</h2>
+  <ul>
+  <li><a href = "https://trello.com/b/qTVfBzpC/untitled-board" />Trello to do lists.</li>
+  </ul>

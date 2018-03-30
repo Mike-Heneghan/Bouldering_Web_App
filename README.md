@@ -1,7 +1,7 @@
 <h1>Bouldering App Project</h1>
 
 <h2>Bouldering Dashboard:</h2>
-<p>I want to start tracking successful attempts of bouldering routes at my local gym.</p>
+<p>I want to start tracking successful attempts of bouldering routes at my local bouldering gym.</p>
 
 <p>The user will be able to keep a record of their successful attempts and see how their friends are also progressing. The route's should also be selectable to find out more detailed information and those users who have completed it.</p>
 
@@ -21,7 +21,7 @@
     <li>CRUD actions for the routes.</li>
     <li>Display the hardest climb achieved by a climber.</li>
     <li>Set a goal of difficulty level when achieved redirected to a congratulations page and prompted for a new goal.</li>
-    <li>Add a difficulty opinnion to a route when a climber has successfully compleyted it.</li>
+    <li>Add a difficulty opinnion to a route when a climber has successfully completed it for feedback to the bouldering gym        route setter.</li>
     <li>Display routes where climbers feel they are easier/harder than route setter intended.</li>
     <li>Add photographs of the routes which are an option to be shown in further details page?</li>
     <li>Add groups of climbers.</li>

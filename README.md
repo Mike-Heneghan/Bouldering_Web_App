@@ -30,4 +30,6 @@
 <h2>Useful Links:</h2>
   <ul>
   <li><a href = "https://trello.com/b/qTVfBzpC/untitled-board" />Trello to do lists.</li>
+  <li><a href = "https://drive.google.com/drive/folders/10c7-06fK5t-6_-jysR1kiNgtGnHHdX5V" />Editable Draw.io Diagrams.</li>
+  <li><a href = "https://drive.google.com/drive/folders/1AXFY-RTogI_RaxoW3UKZCktWANjyjADV" />Editable UX documents.</li>
   </ul>

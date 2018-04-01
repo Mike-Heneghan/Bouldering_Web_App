@@ -26,6 +26,7 @@
     <li>Add photographs of the routes which are an option to be shown in further details page?</li>
     <li>Add groups of climbers.</li>
     <li>Add leaderboard for climbers in group.</li>
+  <li>Add hidden field of tips from climbers who have managed route.</li>
    </ul>
 <h2>Useful Links:</h2>
   <ul>

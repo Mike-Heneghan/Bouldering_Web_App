@@ -1,0 +1,13 @@
+<h1>Edit a user: </h1>
+
+<form  action="/climbers/<%= @climber.id%>" method="post">
+
+  <label for = "name">Name:</label>
+  <input value="<%=@climber.name%>" type = "text" name = "name" id="name"/>
+
+  <label for = "profile">Profile:</label>
+  <textarea value="<%=@climber.profile()%>" name="profile" cols="40" rows="5" id="profile"></textarea>
+
+  <input type="submit" value="Edit User">
+
+</form>

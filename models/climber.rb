@@ -7,7 +7,7 @@ class Climber
   attr_reader :id, :name, :profile
 
   def initialize( options )
-    @id = options['id']
+    @id = options['id'].to_i
     @name = options['name']
     @profile = options['profile']
 
@@ -36,4 +36,36 @@ class Climber
     return climber_objects
   end
 
+  def self.find_by_id(id)
+    sql = "
+    SELECT * FROM climbers
+    WHERE id = $1;"
+
+    values = [id]
+
+    result = SqlRunner.run(sql,values)
+    climber_found = result.map { |climber| Climber.new(climber)}
+    return climber_found[0]
+  end
+
+  def delete
+    sql = "
+    DELETE FROM climbers
+    WHERE id = $1"
+
+    values = [@id]
+
+    SqlRunner.run(sql,values)
+  end
+
+  def update()
+    sql ="
+    UPDATE climbers
+    SET (name, profile) = ($1, $2)
+    WHERE id = $3
+    ;"
+
+    values = [@name, @profile, @id]
+    SqlRunner.run(sql,values)
+  end
 end

@@ -1,0 +1,10 @@
+<h1>Routes:</h1>
+
+  <% for route in @routes %>
+  <h2>Description: <%= route.description %></h2>
+    <ul>
+      <li><h3>Difficulty: V<%= route.difficulty %></h3></li>
+      <li><h3>Secret Hint: <%= route.hint %></h3></li>
+    </ul>
+    <hr/>
+  <% end %>

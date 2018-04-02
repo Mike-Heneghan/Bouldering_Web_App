@@ -9,13 +9,15 @@ get '/climbers' do
   @climbers = Climber.all()
   erb ( :"climbers/index" )
 end
-#
-# # new
-# get '/climbers/new' do
-#   erb ( :"climbers/new")
-# end
-#
-# # create
-# post '/climbers' do
-#
-# end
+
+# new
+get '/climbers/new' do
+  erb ( :"climbers/new")
+end
+
+# create
+post '/climbers' do
+  climber = Climber.new(params)
+  climber.save
+  redirect to ("/climbers")
+end

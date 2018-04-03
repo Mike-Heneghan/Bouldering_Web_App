@@ -1,8 +1,8 @@
 
 <h2>Selected Climb:</h2>
-  <p>Climber Name: <%= @climber.name() %></p>
-  <p>Route Description: <%= @route.description() %></p>
-  <p>Route Difficulty: <%= @route.difficulty() %></p>
+  <p>Climber Name:<a href="/climbers/<%=@climber.id()%>"><%= @climber.name() %></a></p>
+  <p>Route Description: <a href="/routes/<%=@route.id()%>"><%= @route.description() %></a></p>
+  <p>Route Difficulty: <a href="/routes/<%=@route.id()%>"><%= @route.difficulty() %></a></p>
   <p>Attempts Taken: <%= @climb.attempts_taken() %></p>
   <p>Review: <%= @climb.review() %></p>
   <hr/>

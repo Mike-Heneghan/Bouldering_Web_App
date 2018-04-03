@@ -12,10 +12,18 @@ get '/climbs' do
   erb ( :"climbs/index" )
 end
 
+# New
 get '/climbs/new' do
   @climbers = Climber.all
   @routes = Route.all
   erb(:"climbs/new")
+end
+
+# Create
+post '/climbs' do
+  climbs = Climb.new(params)
+  climbs.save()
+  redirect to ("/climbs")
 end
 
 # show

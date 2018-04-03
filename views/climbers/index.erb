@@ -1,6 +1,8 @@
 
 <h1>Climbers:</h1>
-
+<form method="get" action="/climbers/new">
+  <button>New User</button>
+</form>
   <% for climber in @climbers %>
   <h2><%= climber.name %></h2>
     <p><%= climber.profile %></p>

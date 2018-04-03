@@ -1,19 +1,22 @@
-<h1>Add a new user: </h1>
+<h1>Create a route: </h1>
 
-<form  action="/climbers" method="post">
+<form  action="/routes" method="post">
 
-  <label for = "name">Name:</label>
-  <input type = "text" name = "name" id="name"/>
+  <label for = "description">Description:</label>
+  <input  type = "text" name = "description" id="description"/>
 
-  <label for = "profile">Profile:</label>
-  <textarea name="profile" cols="40" rows="5" id="profile"></textarea>
+  <label for = "difficulty">Difficulty:</label>
+  <input  type = "text" name="difficulty" id="difficulty"></input>
 
-  <input type="submit" value="Create User">
+  <label for = "hint">Hint:</label>
+  <textarea name = "hint" cols="40" rows="5" id="hint"></textarea>
+
+  <label for = "img_link">Link to Image:</label>
+  <input type = "text" name = "img_link" id="img-link"/>
+
+  <input type="submit" value="Create Route">
 
 </form>
-
-
-
 
 
 

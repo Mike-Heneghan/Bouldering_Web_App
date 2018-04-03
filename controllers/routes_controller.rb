@@ -10,6 +10,11 @@ get '/routes' do
   erb ( :"routes/index" )
 end
 
+# new
+get '/routes/new' do
+  erb (:"routes/new")
+end
+
 # create
 post '/routes' do
   route = Route.new(params)

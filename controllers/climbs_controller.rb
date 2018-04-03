@@ -12,6 +12,12 @@ get '/climbs' do
   erb ( :"climbs/index" )
 end
 
+get '/climbs/new' do
+  @climbers = Climber.all
+  @routes = Route.all
+  erb(:"climbs/new")
+end
+
 # show
 get '/climbs/:id' do
   @climb = Climb.find_by_id(params['id'].to_i)

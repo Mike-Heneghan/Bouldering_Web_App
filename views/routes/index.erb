@@ -5,8 +5,10 @@
     <ul>
       <li><h3>Difficulty: V<%= route.difficulty %></h3></li>
       <li><h3>Secret Hint: <%= route.hint %></h3></li>
+      <form method="get" action="/routes/<%= route.id %>">
+        <button>Show Route Details</button>
+      </form>
     </ul>
-    <form method="get" action="/routes/<%=route.id%>">
-      <button>Show Route Details</button>
+
     <hr/>
   <% end %>

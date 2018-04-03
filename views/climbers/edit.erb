@@ -6,7 +6,7 @@
   <input value="<%=@climber.name%>" type = "text" name = "name" id="name"/>
 
   <label for = "profile">Profile:</label>
-  <textarea value="<%=@climber.profile()%>" name="profile" cols="40" rows="5" id="profile"></textarea>
+  <textarea name="profile" cols="40" rows="5" id="profile"><%=@climber.profile()%></textarea>
 
   <input type="submit" value="Edit User">
 

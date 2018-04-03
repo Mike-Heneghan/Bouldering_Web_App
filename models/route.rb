@@ -71,5 +71,30 @@ class Route
     SqlRunner.run(sql,values)
   end
 
+  def find_climbers_and_attempts
+    sql = "
+    SELECT climbers.id, climbers.name, climbs.attempts_taken, climbs.id as c_id
+    FROM climbers INNER JOIN climbs
+    ON climbers.id = climbs.climber_id
+    WHERE climbs.route_id = $1
+    ORDER BY climbs.attempts_taken ASC;"
+
+    values = [@id]
+
+    result = SqlRunner.run(sql,values)
+
+  end
+
+  # def find_routes_and_attempts()
+  #   sql = "
+  #   SELECT routes.id, routes.description, routes.difficulty, climbs.attempts_taken, climbs.id as c_id
+  #   FROM routes INNER JOIN climbs
+  #   ON routes.id = climbs.route_id
+  #   WHERE climbs.climber_id = $1;"
+  #
+  #   values = [@id]
+  #   result = SqlRunner.run(sql,values)
+  #
+  # end
 
 end

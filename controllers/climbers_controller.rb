@@ -25,6 +25,7 @@ end
 # show
 get '/climbers/:id' do
   @climber = Climber.find_by_id(params['id'].to_i)
+  @routes_and_attempts = @climber.find_routes_and_attempts()
   erb ( :"climbers/show" )
 end
 

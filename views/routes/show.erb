@@ -8,4 +8,17 @@
   </form>
   <form method="get" action="/routes/<%=@route.id%>/edit">
     <button>Edit Route</button>
-  <hr/>
+  <table> Leaderboard:
+    <tr>
+      <th>Climber Name</th>
+      <th>Attempts Taken</th>
+      <th>Climber Review</th>
+    </tr>
+    <% for info in @climbers_and_attempts  %>
+    <tr>
+      <td><a href="/climbers/<%=info['id']%>"><%=info['name']%></a></td>
+      <td><%=info['attempts_taken']%></td>
+      <td><a href="/climbs/<%=info['c_id']%>">Review</a></td>
+    </tr>
+    <% end %>
+    <hr/>

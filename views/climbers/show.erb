@@ -1,11 +1,26 @@
 
 <h2>Selected Climber:</h2>
-  <p>Name: <%= @climber.name() %></p>
-  <p>Profile: <%= @climber.profile() %></p>
-  <form method="post" action="/climbers/<%= @climber.id %>/delete">
-    <button>Delete User Profile</button>
-  </form>
-  <form method="get" action="/climbers/<%= @climber.id %>/edit">
-    <button>Edit User Profile</button>
-  </form>
+<p>Name: <%= @climber.name() %></p>
+<p>Profile: <%= @climber.profile() %></p>
+<form method="post" action="/climbers/<%= @climber.id %>/delete">
+  <button>Delete User Profile</button>
+</form>
+<form method="get" action="/climbers/<%= @climber.id %>/edit">
+  <button>Edit User Profile</button>
+</form>
+<table>
+  <tr>
+    <th>Route Description</th>
+    <th>Difficulty</th>
+    <th>Attemps Taken</th>
+    <th>Climber Review</th>
+  </tr>
+  <% for info in @routes_and_attempts  %>
+  <tr>
+    <td><a href="/routes/<%=info['id']%>"><%=info['description']%></a></td>
+    <td><a href="/routes/<%=info['id']%>"><%=info['difficulty']%></a></td>
+    <td><%=info['attempts_taken']%></td>
+    <td><a href="/climbs/<%=info['c_id']%>">Review</a></td>
+  </tr>
+  <% end %>
   <hr/>

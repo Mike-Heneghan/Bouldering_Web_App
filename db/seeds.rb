@@ -19,8 +19,8 @@ route1 = Route.new({
 route1.save()
 
 climb1 = Climb.new({
-  'route_id' => route1.id,
-  'climber_id' => climber1.id,
+  'route_id' => route1.id(),
+  'climber_id' => climber1.id(),
   'attempts_taken' => '7',
   'review' => 'The route was harder than expected. Great dyno midway though.'
   })

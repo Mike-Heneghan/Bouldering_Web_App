@@ -20,6 +20,7 @@ end
 # show
 get '/routes/:id' do
   @route = Route.find_by_id(params['id'].to_i)
+  @climbers_and_attempts = @route.find_climbers_and_attempts()
   erb ( :"routes/show" )
 end
 

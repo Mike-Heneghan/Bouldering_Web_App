@@ -1,6 +1,8 @@
 require("pry")
 
 require_relative("../db/sql_runner")
+require_relative("./climber")
+require_relative("./route")
 
 class Climb
 
@@ -72,6 +74,36 @@ class Climb
     SqlRunner.run(sql,values)
   end
 
+  def find_climber_by_id()
+    sql = "
+    SELECT climbers.*
+    FROM climbers
+    WHERE id = $1"
+
+    values = [@climber_id]
+
+    result = SqlRunner.run(sql,values)
+    climber_object = result.map { |climber| Climber.new(climber) }
+    return climber_object[0]
+  end
+
+  def find_route_by_id()
+    sql = "
+    SELECT routes.*
+    FROM routes
+    WHERE id = $1"
+
+    values = [@route_id]
+
+    result = SqlRunner.run(sql,values)
+    route_object = result.map { |route| Route.new(route) }
+    return route_object[0]
+  end
+
+
+
+
+
   # def find_routes_and_attempts()
   #   sql = "
   #   SELECT routes.id, routes.description, routes.difficulty, climbs.attempts_taken, climbs.id as c_id
@@ -81,7 +113,7 @@ class Climb
   #
   #   values = [@id]
   #   result = SqlRunner.run(sql,values)
-  # 
+  #
   # end
 
 

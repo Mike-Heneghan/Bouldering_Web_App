@@ -1,6 +1,16 @@
 <h1>Successful Climbs:</h1>
-  <% for climb in @climbs %>
-    <ul>
-      <li>Climber Name:</li>
+  <table>
+    <tr>
+      <th>Route Description</th>
+      <th>Climber</th>
+      <th>Details</th>
+    </tr>
+    <% for climb in @climbs %>
+    <tr>
+      <td><a href="/routes/<%=(climb.find_route_by_id).id()%>"><%=(climb.find_route_by_id).description()%></a></td>
+      <td><a href="/climbers/<%=(climb.find_climber_by_id).id()%>"><%=(climb.find_climber_by_id).name()%></a></td>
+      <td><a href="/climbs/<%=climb.id%>">Details</a></td>
+    </tr>
     <hr/>
-  <% end %>
+    <% end %>
+  </table>

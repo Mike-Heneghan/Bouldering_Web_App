@@ -38,4 +38,38 @@ class Route
     return route_objects
   end
 
+  def self.find_by_id(id)
+    sql = "
+    SELECT * FROM routes
+    WHERE id = $1;"
+
+    values = [id]
+
+    result = SqlRunner.run(sql,values)
+    route_found = result.map { |route| Route.new(route)}
+    return route_found[0]
+  end
+
+  def delete
+    sql = "
+    DELETE FROM routes
+    WHERE id = $1"
+
+    values = [@id]
+
+    SqlRunner.run(sql,values)
+  end
+
+  def update()
+    sql ="
+    UPDATE routes
+    SET (description, difficulty, hint, img_link) = ($1, $2, $3, $4)
+    WHERE id = $5
+    ;"
+
+    values = [@description, @difficulty, @hint, @img_link, @id]
+    SqlRunner.run(sql,values)
+  end
+
+
 end

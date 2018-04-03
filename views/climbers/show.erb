@@ -2,4 +2,10 @@
 <h2>Selected Climber:</h2>
   <p>Name: <%= @climber.name() %></p>
   <p>Profile: <%= @climber.profile() %></p>
+  <form method="post" action="/climbers/<%= @climber.id %>/delete">
+    <button>Delete User Profile</button>
+  </form>
+  <form method="get" action="/climbers/<%= @climber.id %>/edit">
+    <button>Edit User Profile</button>
+  </form>
   <hr/>

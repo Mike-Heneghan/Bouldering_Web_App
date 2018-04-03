@@ -4,11 +4,8 @@
   <% for climber in @climbers %>
   <h2><%= climber.name %></h2>
     <p><%= climber.profile %></p>
-    <form method="post" action="/climbers/<%= climber.id %>/delete">
-      <button>Delete User Profile</button>
-    </form>
-    <form method="post" action="/climbers/<%= climber.id %>/edit">
-      <button>Edit User Profile</button>
+    <form method="get" action="/climbers/<%= climber.id %>">
+      <button>User Details</button>
     </form>
     <hr/>
   <% end %>

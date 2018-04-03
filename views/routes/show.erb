@@ -1,0 +1,12 @@
+
+<h2>Selected Route:</h2>
+  <p>Description: <%= @route.description() %></p>
+  <p>Difficulty: V<%= @route.difficulty() %></p>
+  <p>Hint: <%= @route.hint() %></p>
+  <form method="post" action="/routes/<%=@route.id%>/delete">
+    <button>Delete Route</button>
+  </form>
+  <form method="get" action="/routes/<%=@route.id%>/edit">
+    <button>Edit Route</button>
+  <!-- <p>Difficulty: V<%= @route.difficulty() %></p> -->
+  <hr/>

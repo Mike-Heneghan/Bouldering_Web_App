@@ -5,4 +5,10 @@
   <p>Route Difficulty: <a href="/routes/<%=@route.id()%>"><%= @route.difficulty() %></a></p>
   <p>Attempts Taken: <%= @climb.attempts_taken() %></p>
   <p>Review: <%= @climb.review() %></p>
+  <form method="post" action="/climbs/<%= @climb.id %>/delete">
+    <button>Delete Climb Information</button>
+  </form>
+  <form method="get" action="/climbs/<%= @climb.id %>/edit">
+    <button>Edit Climb Information</button>
+  </form>
   <hr/>

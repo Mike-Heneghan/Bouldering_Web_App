@@ -41,12 +41,18 @@ post '/climbs/:id/delete' do
   redirect to ("/climbs")
 end
 
-get '/climbers/:id/edit' do
+# edit
+get '/climbs/:id/edit' do
   @climb = Climb.find_by_id(params['id'].to_i)
+  @route = Route.find_by_id(@climb.route_id)
+  @climber = Climber.find_by_id(@climb.climber_id)
+  @climbers = Climber.all()
+  @routes = Route.all()
   erb ( :"climbs/edit")
 end
 
-post '/climbers/:id' do
+# update
+post '/climbs/:id' do
   @climb = Climb.new(params)
   @climb.update()
   redirect to ("/climbs")

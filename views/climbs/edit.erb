@@ -1,0 +1,28 @@
+<h1>Edit a climb: </h1>
+
+<form  action="/climbs/<%=@climb.id()%>" method="post">
+
+  <label for = "route_id">Route Description:</label>
+  <select name = "route_id" id="route_id">
+    <% for route in @routes %>
+      <option value=<%= route.id %> <%= "selected" if route.id == @route.id %>><%= route.description() %></option>
+    <% end %>
+  </select>
+
+  <label for = "climber_id">User Name:</label>
+  <select name = "climber_id" id="climber_id">
+    <% for climber in @climbers %>
+      <option value=<%= climber.id %> <%= "selected" if climber.id == @climber.id %>><%=climber.name()%></option>
+    <% end %>
+  </select>
+
+    <label for = "attempts_taken">Attempts Required:</label>
+    <input value="<%=@climb.attempts_taken%>" type = "text" name = "attempts_taken" id="attempts_taken"/>
+
+  <label for = "review">Review:</label>
+  <textarea name = "review" cols="40" rows="5" id="review"><%=@climb.review()%></textarea>
+
+
+  <input type="submit" value="Update Climb">
+
+</form>

@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Climbers</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>Alien Bloc</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body class='wrapper'>
+  <nav class="flex-nav"r>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/climbers">See Climbers</a></li>
+      <!-- <ul> -->
+      <li><a href="/climbers/new">Create a new Climber</a></li>
+      <!-- </ul> -->
+      <li><a href="/routes">See Routes</a></li>
+      <!-- <ul> -->
+      <li><a href="/routes/new">Log a new Route</a></li>
+      <!-- </ul> -->
+      <li><a href="/climbs">See Successful Climbs</a></li>
+      <!-- <ul> -->
+      <li><a href="/climbs/new">Log a new Climb</a></li>
+      <!-- </ul> -->
+    </ul>
+  </nav>
+  <div class="flex-content">
     <%= yield %>
-  </body>
+  </div>
+</body>
 </html>

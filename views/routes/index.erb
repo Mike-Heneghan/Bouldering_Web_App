@@ -1,16 +1,22 @@
-<h1>Routes:</h1>
+<h1 class='title-container'>Routes</h1>
 <form method="get" action="/routes/new">
   <button>New Route</button>
-</form>
-  <% for route in @routes %>
-  <h2>Description: <%= route.description %></h2>
-    <ul>
-      <li><h3>Difficulty: V<%= route.difficulty %></h3></li>
-      <li><h3>Secret Hint: <%= route.hint %></h3></li>
-      <form method="get" action="/routes/<%= route.id %>">
+  <div class="content-area-container">
+  </form>
+    <% for route in @routes %>
+    <div class="entry-area">
+    <h2 class="content-title-box">Description: <%= route.description %></h2>
+    <div class ="content-container">
+    <img src="<%=route.img_link()%>" alt="Image of route." class="content-img-box">
+    <ul class="container-boxes">
+      <li class="content-box"><h3>Difficulty: V<%= route.difficulty %></h3></li>
+      <li class="content-box"><h3>Secret Hint: <%= route.hint %></h3></li>
+      <form method="get" action="/routes/<%= route.id %>" class="content-box">
         <button>Show Route Details</button>
       </form>
     </ul>
-
-    <hr/>
+  </div>
+</div>
+  <hr/>
   <% end %>
+</div>

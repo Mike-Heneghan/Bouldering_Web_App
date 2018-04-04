@@ -16,7 +16,7 @@
 
 .wrapper {
   margin: auto;
-  max-width: 1200px;
+  max-width: 80%;
   padding: 10px;
 }
 
@@ -62,6 +62,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .flex-content .content-title-box {
@@ -77,6 +78,7 @@
   border-color: yellow;
   flex-direction: column;
   flex: 1;
+  margin: 0px;
 
 }
 
@@ -110,3 +112,15 @@
   width: 75%;
 
 }
+
+/*Climbs Table Styling*/
+.flex-content table{
+  border-collapse:collapse;
+  width: 100%;
+}
+
+.flex-content table, th, td{
+  border:1px solid blue;
+  padding: 10px;
+}
+.flex-content tr:hover {background-color: #aec6cf;}

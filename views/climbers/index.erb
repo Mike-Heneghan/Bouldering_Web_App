@@ -1,12 +1,21 @@
-<h1>Climbers:</h1>
+<h1 class='title-container'>Climbers</h1>
 <form method="get" action="/climbers/new">
   <button>New User</button>
-</form>
+  <div class="content-area-container">
+  </form>
   <% for climber in @climbers %>
-  <h2><%= climber.name %></h2>
-    <p><%= climber.profile %></p>
-    <form method="get" action="/climbers/<%= climber.id %>">
-      <button>User Details</button>
-    </form>
-    <hr/>
+  <div class="entry-area">
+    <h2 class='content-title-box'><%= climber.name %></h2>
+    <div class='content-container'>
+      <img src="climber-generic.jpg" alt="Image of climber." class="content-img-box">
+      <div class="container-boxes">
+        <h3 class="content-box">Profile: <%= climber.profile %></h3>
+        <form method="get" action="/climbers/<%= climber.id %>" class="content-box">
+          <button>User Details</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <hr/>
   <% end %>
+</div>

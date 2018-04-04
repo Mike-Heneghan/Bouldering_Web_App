@@ -3,20 +3,20 @@
   <button>New Route</button>
   <div class="content-area-container">
   </form>
-    <% for route in @routes %>
-    <div class="entry-area">
+  <% for route in @routes %>
+  <div class="entry-area">
     <h2 class="content-title-box">Description: <%= route.description %></h2>
     <div class ="content-container">
-    <img src="<%=route.img_link()%>" alt="Image of route." class="content-img-box">
-    <ul class="container-boxes">
-      <li class="content-box"><h3>Difficulty: V<%= route.difficulty %></h3></li>
-      <li class="content-box"><h3>Secret Hint: <%= route.hint %></h3></li>
-      <form method="get" action="/routes/<%= route.id %>" class="content-box">
-        <button>Show Route Details</button>
-      </form>
-    </ul>
+      <img src="<%=route.img_link()%>" alt="Image of route." class="content-img-box">
+      <ul class="container-boxes">
+        <li class="content-box"><h3>Difficulty: V<%= route.difficulty %></h3></li>
+        <li class="content-box"><h3>Secret Hint: <%= route.hint %></h3></li>
+        <form method="get" action="/routes/<%= route.id %>" class="content-box">
+          <button>Show Route Details</button>
+        </form>
+      </ul>
+    </div>
   </div>
-</div>
   <hr/>
   <% end %>
 </div>

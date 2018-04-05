@@ -1,13 +1,23 @@
 
-<h2>Selected Climber:</h2>
-<p>Name: <%= @climber.name() %></p>
-<p>Profile: <%= @climber.profile() %></p>
-<form method="post" action="/climbers/<%= @climber.id %>/delete">
-  <button>Delete User Profile</button>
-</form>
-<form method="get" action="/climbers/<%= @climber.id %>/edit">
-  <button>Edit User Profile</button>
-</form>
+<h2 class="title-container">Selected Climber</h2>
+<div class="content-area-container">
+  <div class="entry-area">
+    <div class="content-container">
+      <img src="climber-generic.jpg>" alt="Image of generic climber" class="content-img-box">
+      <div class="container-boxes">
+        <p class="content-box">Name: <%= @climber.name() %></p>
+        <p class="content-box">Profile: <%= @climber.profile() %></p>
+        <form method="post" action="/climbers/<%= @climber.id %>/delete" class="content-box">
+          <button>Delete User Profile</button>
+        </form>
+        <form method="get" action="/climbers/<%= @climber.id %>/edit" class="content-box">
+          <button>Edit User Profile</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<h2 class="title-container">Successful Climbs</h2>
 <table>
   <tr>
     <th>Route Description</th>
@@ -23,4 +33,3 @@
     <td><a href="/climbs/<%=info['c_id']%>">Review</a></td>
   </tr>
   <% end %>
-  <hr/>

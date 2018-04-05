@@ -1,16 +1,16 @@
-
-<h1>Create a climb: </h1>
-
+<h1 class="title-container">Create a Climb</h1>
+<div class="content-area-container">
+  <div class="entry-area">
 <form  action="/climbs" method="post">
 
-  <label for = "route_id">Route Description:</label>
+  <label for = "route_id">Select Route</label>
   <select name = "route_id" id="route_id">
     <% for route in @routes %>
       <option value=<%= route.id %>><%= route.description() %></option>
     <% end %>
   </select>
 
-  <label for = "climber_id">User Name:</label>
+  <label for = "climber_id">Select Climber</label>
   <select name = "climber_id" id="climber_id">
     <% for climber in @climbers %>
       <option value=<%= climber.id %>><%=climber.name()%></option>
@@ -25,5 +25,6 @@
 
 
   <input type="submit" value="Log Successful Climb">
-
 </form>
+</div>
+</div>

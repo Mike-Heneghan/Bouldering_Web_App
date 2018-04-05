@@ -1,30 +1,30 @@
 <h1 class="title-container">Create a Climb</h1>
 <div class="content-area-container">
   <div class="entry-area">
-<form  action="/climbs" method="post">
+    <form  action="/climbs" method="post">
 
-  <label for = "route_id">Select Route</label>
-  <select name = "route_id" id="route_id">
-    <% for route in @routes %>
-      <option value=<%= route.id %>><%= route.description() %></option>
-    <% end %>
-  </select>
+      <label for = "route_id">Select Route</label>
+      <select name = "route_id" id="route_id">
+        <% for route in @routes %>
+        <option value=<%= route.id %>><%= route.description() %></option>
+        <% end %>
+      </select>
 
-  <label for = "climber_id">Select Climber</label>
-  <select name = "climber_id" id="climber_id">
-    <% for climber in @climbers %>
-      <option value=<%= climber.id %>><%=climber.name()%></option>
-    <% end %>
-  </select>
+      <label for = "climber_id">Select Climber</label>
+      <select name = "climber_id" id="climber_id">
+        <% for climber in @climbers %>
+        <option value=<%= climber.id %>><%=climber.name()%></option>
+        <% end %>
+      </select>
 
-    <label for = "attempts_taken">Attempts Required:</label>
-    <input type = "text" name = "attempts_taken" id="attempts_taken"/>
+      <label for = "attempts_taken">Attempts Required:</label>
+      <input type = "text" name = "attempts_taken" id="attempts_taken"/>
 
-  <label for = "review">Review:</label>
-  <textarea name = "review" cols="40" rows="5" id="review"></textarea>
+      <label for = "review">Review:</label>
+      <textarea name = "review" cols="40" rows="5" id="review"></textarea>
 
 
-  <input type="submit" value="Log Successful Climb">
-</form>
-</div>
+      <input type="submit" value="Log Successful Climb">
+    </form>
+  </div>
 </div>

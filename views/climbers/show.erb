@@ -19,19 +19,19 @@
 </div>
 <h2 class="title-container">Successful Climbs</h2>
 <div class="content-area-container">
-<table>
-  <tr>
-    <th>Route Description</th>
-    <th>Difficulty</th>
-    <th>Attemps Taken</th>
-    <th>Climber Review</th>
-  </tr>
-  <% for info in @routes_and_attempts  %>
-  <tr>
-    <td><a href="/routes/<%=info['id']%>"><%=info['description']%></a></td>
-    <td><a href="/routes/<%=info['id']%>"><%=info['difficulty']%></a></td>
-    <td><%=info['attempts_taken']%></td>
-    <td><a href="/climbs/<%=info['c_id']%>">Review</a></td>
-  </tr>
-  <% end %>
-</div>
+  <table>
+    <tr>
+      <th>Route Description</th>
+      <th>Difficulty</th>
+      <th>Attemps Taken</th>
+      <th>Climber Review</th>
+    </tr>
+    <% for info in @routes_and_attempts  %>
+    <tr>
+      <td><a href="/routes/<%=info['id']%>"><%=info['description']%></a></td>
+      <td><a href="/routes/<%=info['id']%>"><%=info['difficulty']%></a></td>
+      <td><%=info['attempts_taken']%></td>
+      <td><a href="/climbs/<%=info['c_id']%>">Review</a></td>
+    </tr>
+    <% end %>
+  </div>

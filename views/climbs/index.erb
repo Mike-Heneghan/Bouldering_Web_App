@@ -3,21 +3,21 @@
   <button>New Climb</button>
   <div class="content-area-container">
 
-      <table >
-        <tr>
-          <th>Route Description</th>
-          <th>Climber Name</th>
-          <th>Climber Review</th>
-          <th>Edit</th>
-        </tr>
-        <% for climb in @climbs %>
-        <tr>
-          <td><a href="/routes/<%=(climb.find_route_by_id).id()%>"><%=(climb.find_route_by_id).description()%></a></td>
-          <td><a href="/climbers/<%=(climb.find_climber_by_id).id()%>"><%=(climb.find_climber_by_id).name()%></a></td>
-          <td><a href="/climbs/<%=climb.id%>">Review</a></td>
-          <td><a href="/climbs/<%=climb.id%>/edit">Edit</a></td>
-        </tr>
+    <table >
+      <tr>
+        <th>Route Description</th>
+        <th>Climber Name</th>
+        <th>Climber Review</th>
+        <th>Edit</th>
+      </tr>
+      <% for climb in @climbs %>
+      <tr>
+        <td><a href="/routes/<%=(climb.find_route_by_id).id()%>"><%=(climb.find_route_by_id).description()%></a></td>
+        <td><a href="/climbers/<%=(climb.find_climber_by_id).id()%>"><%=(climb.find_climber_by_id).name()%></a></td>
+        <td><a href="/climbs/<%=climb.id%>">Review</a></td>
+        <td><a href="/climbs/<%=climb.id%>/edit">Edit</a></td>
+      </tr>
 
-        <% end %>
-      </table>
+      <% end %>
+    </table>
   </div>

@@ -16,13 +16,13 @@ route1 = Route.new({
   'img_link' => 'public'
   })
 
-route1.save()
+  route1.save()
 
-climb1 = Climb.new({
-  'route_id' => route1.id(),
-  'climber_id' => climber1.id(),
-  'attempts_taken' => '7',
-  'review' => 'The route was harder than expected. Great dyno midway though.'
-  })
+  climb1 = Climb.new({
+    'route_id' => route1.id(),
+    'climber_id' => climber1.id(),
+    'attempts_taken' => '7',
+    'review' => 'The route was harder than expected. Great dyno midway though.'
+    })
 
-climb1.save()
+    climb1.save()

@@ -1,19 +1,18 @@
-
 <h2 class="title-container">Selected Climb:</h2>
 <div class="content-area-container">
   <div class="entry-area">
     <div class="container-boxes">
-  <p class="content-box">Climber Name: <a href="/climbers/<%=@climber.id()%>"><%= @climber.name() %></a></p>
-  <p class="content-box">Route Description: <a href="/routes/<%=@route.id()%>"><%= @route.description() %></a></p>
-  <p class="content-box">Route Difficulty: V<%= @route.difficulty() %></p>
-  <p class="content-box">Attempts Taken: <%= @climb.attempts_taken() %></p>
-  <p class="content-box">Review: <%= @climb.review() %></p>
-  <form method="post" action="/climbs/<%= @climb.id %>/delete" class="content-box">
-    <button>Delete Climb Information</button>
-  </form>
-  <form method="get" action="/climbs/<%= @climb.id %>/edit" class="content-box">
-    <button>Edit Climb Information</button>
-  </form>
-</div>
-</div>
+      <p class="content-box">Climber Name: <a href="/climbers/<%=@climber.id()%>"><%= @climber.name() %></a></p>
+      <p class="content-box">Route Description: <a href="/routes/<%=@route.id()%>"><%= @route.description() %></a></p>
+      <p class="content-box">Route Difficulty: V<%= @route.difficulty() %></p>
+      <p class="content-box">Attempts Taken: <%= @climb.attempts_taken() %></p>
+      <p class="content-box">Review: <%= @climb.review() %></p>
+      <form method="post" action="/climbs/<%= @climb.id %>/delete" class="content-box">
+        <button>Delete Climb Information</button>
+      </form>
+      <form method="get" action="/climbs/<%= @climb.id %>/edit" class="content-box">
+        <button>Edit Climb Information</button>
+      </form>
+    </div>
+  </div>
 </div>

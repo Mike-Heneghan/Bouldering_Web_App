@@ -9,11 +9,11 @@ CREATE TABLE climbers(
 );
 
 CREATE TABLE routes(
-    id SERIAL4 PRIMARY KEY,
-    description VARCHAR(255),
-    difficulty INT,
-    hint TEXT,
-    img_link VARCHAR(255)
+  id SERIAL4 PRIMARY KEY,
+  description VARCHAR(255),
+  difficulty INT,
+  hint TEXT,
+  img_link VARCHAR(255)
 );
 
 CREATE TABLE climbs(

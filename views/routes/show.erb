@@ -1,25 +1,33 @@
 
-<h2>Selected Route:</h2>
-  <p>Description: <%= @route.description() %></p>
-  <p>Difficulty: V<%= @route.difficulty() %></p>
-  <p>Hint: <%= @route.hint() %></p>
-  <form method="post" action="/routes/<%=@route.id%>/delete">
-    <button>Delete Route</button>
-  </form>
-  <form method="get" action="/routes/<%=@route.id%>/edit">
-    <button>Edit Route</button>
-    <h2>Leaderboard:</h2>
-  <table>
-    <tr>
-      <th>Climber Name</th>
-      <th>Attempts Taken</th>
-      <th>Climber Review</th>
-    </tr>
-    <% for info in @climbers_and_attempts  %>
-    <tr>
-      <td><a href="/climbers/<%=info['id']%>"><%=info['name']%></a></td>
-      <td><%=info['attempts_taken']%></td>
-      <td><a href="/climbs/<%=info['c_id']%>">Review</a></td>
-    </tr>
-    <% end %>
-    <hr/>
+<h2 class="title-container">Selected Route:</h2>
+<div class="content-area-container">
+  <div class="entry-area">
+    <div class ="content-container">
+      <img src="<%=@route.img_link()%>" alt="Image of route." class="content-img-box">
+      <div class="container-boxes">
+        <p class="content-box">Description: <%= @route.description() %></p>
+        <p class="content-box">Difficulty: V<%= @route.difficulty() %></p>
+        <p class="content-box">Hint: <%= @route.hint() %></p>
+        <form method="post" action="/routes/<%=@route.id%>/delete" class="content-box">
+          <button>Delete Route</button>
+        </form>
+        <form method="get" action="/routes/<%=@route.id%>/edit" class="content-box">
+          <button>Edit Route</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <h2 class="title-container">Leaderboard:</h2>
+    <table>
+      <tr>
+        <th>Climber Name</th>
+        <th>Attempts Taken</th>
+        <th>Climber Review</th>
+      </tr>
+      <% for info in @climbers_and_attempts  %>
+      <tr>
+        <td><a href="/climbers/<%=info['id']%>"><%=info['name']%></a></td>
+        <td><%=info['attempts_taken']%></td>
+        <td><a href="/climbs/<%=info['c_id']%>">Review</a></td>
+      </tr>
+      <% end %>

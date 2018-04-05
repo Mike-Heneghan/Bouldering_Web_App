@@ -1,20 +1,23 @@
 <h1 class="title-container">Successful Climbs:</h1>
 <form method="get" action="/climbs/new">
   <button>New Climb</button>
-  <table>
-    <tr>
-      <th>Route Description</th>
-      <th>Climber Name</th>
-      <th>Climber Review</th>
-      <th>Edit</th>
-    </tr>
-    <% for climb in @climbs %>
-    <tr>
-      <td><a href="/routes/<%=(climb.find_route_by_id).id()%>"><%=(climb.find_route_by_id).description()%></a></td>
-      <td><a href="/climbers/<%=(climb.find_climber_by_id).id()%>"><%=(climb.find_climber_by_id).name()%></a></td>
-      <td><a href="/climbs/<%=climb.id%>">Review</a></td>
-      <td><a href="/climbs/<%=climb.id%>/edit">Edit</a></td>
-    </tr>
+  <div class="content-area-container">
 
-    <% end %>
-  </table>
+      <table >
+        <tr>
+          <th>Route Description</th>
+          <th>Climber Name</th>
+          <th>Climber Review</th>
+          <th>Edit</th>
+        </tr>
+        <% for climb in @climbs %>
+        <tr>
+          <td><a href="/routes/<%=(climb.find_route_by_id).id()%>"><%=(climb.find_route_by_id).description()%></a></td>
+          <td><a href="/climbers/<%=(climb.find_climber_by_id).id()%>"><%=(climb.find_climber_by_id).name()%></a></td>
+          <td><a href="/climbs/<%=climb.id%>">Review</a></td>
+          <td><a href="/climbs/<%=climb.id%>/edit">Edit</a></td>
+        </tr>
+
+        <% end %>
+      </table>
+  </div>

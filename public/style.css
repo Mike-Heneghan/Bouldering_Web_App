@@ -141,7 +141,6 @@ h1 {
   min-height: 200px;
   border-color: #708090;
   flex-direction: row;
-  opacity: none;
   border-bottom-left-radius: 10px;
 }
 
